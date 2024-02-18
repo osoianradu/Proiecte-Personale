@@ -14,7 +14,7 @@ const stars = [];
 
 for (let i = 0; i < 16; i++) {
 	const star = new Star(
-		Math.floor((Math.random() + canvas.width - 100) * canvas.width),
+		Math.floor(Math.random() * canvas.width),
 		Math.floor(Math.random() * canvas.height),
 		Math.floor(Math.random() + 1 * 6)
 	);

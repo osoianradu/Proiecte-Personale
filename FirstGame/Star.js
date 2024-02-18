@@ -19,16 +19,14 @@ export default class Star {
 	}
 
 	draw(ctx) {
-		setTimeout(() => {
-			ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-		}, 1000);
+		ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
 
 		this.collideWithWalls();
 	}
 
 	collideWithWalls() {
 		if (this.x < 0) {
-			this.x = this.start_x;
+			this.x = this.canvas.width;
 			this.y = Math.floor(Math.random() * (this.canvas.height - this.height));
 		}
 		if (this.x > this.canvas.width - this.width) {
